@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /assets
+Disallow: /uploads
+Disallow: /staff
+Disallow: /admin
+Sitemap: http://tatianarazumova.ru/sitemap.xml
+Host: tatianarazumova.ru

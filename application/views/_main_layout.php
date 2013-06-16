@@ -33,6 +33,9 @@
                     <div class="user-navigation">
                         <ul>
                         <?php foreach ($horizontal_menu as $section): ?>
+                            <?php if ($section->slug == 'homepage') : ?>
+                                <?php $section->slug = ''; ?>
+                            <?php endif; ?>
                             <li><a href="<?=site_url($section->slug)?>" title="<?=$section->title?>"><?=$section->title?></a></li>
                         <?php endforeach; ?>
                             <li>
