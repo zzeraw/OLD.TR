@@ -8,7 +8,7 @@ class Item extends Admin_Controller
         $this->load->model('item_model');
         $this->load->model('collection_model');
         $this->load->model('group_model');
-        // $this->load->model('image_model');
+        $this->load->model('image_model');
         $this->load->model('color_model');
     }
 
@@ -17,6 +17,8 @@ class Item extends Admin_Controller
         // Fetch all items
         $this->data['items'] = $this->item_model->get();
         $this->data['images'] = $this->item_model->get_thumb_items_pairs();
+
+        // var_dump($this->data['items']);
 
         // Load view
         $this->data['subview'] = 'admin/item/index';
@@ -133,7 +135,15 @@ class Item extends Admin_Controller
 
     public function delete ($id)
     {
+        // $images = $this->image_model->get_by(array('id_c_item' => $id));
         $this->item_model->delete($id);
+
+        // if () {
+        //     foreach ($images as $image) {
+        //         !file_exists($image->filename) || unlink('./uploads/' . $image->filename);
+        //         !file_exists($image->thumb) || unlink('./uploads/' . $image->thumb);
+        //     }
+        // }
         redirect('admin/item');
     }
 
