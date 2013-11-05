@@ -55,9 +55,9 @@ class Color_Model extends MY_Model
         $color_file_config['upload_path'] = './uploads/colors/';
         $color_file_config['allowed_types'] = 'gif|jpg|png|jpeg';
         $color_file_config['file_name'] = sha1(time());
-        $color_file_config['max_size'] = '200';
-        $color_file_config['max_width']  = '500';
-        $color_file_config['max_height']  = '500';
+        $color_file_config['max_size'] = '0';
+        $color_file_config['max_width']  = '0';
+        $color_file_config['max_height']  = '0';
 
         $this->load->library('upload', $color_file_config);
 

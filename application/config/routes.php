@@ -40,7 +40,6 @@
 
 $route['default_controller'] = "main";
 
-$route['staff'] = 'admin/dashboard';
 $route['admin'] = 'admin/dashboard';
 $route['admin/(:any)'] = 'admin/$1';
 $route['(:any)'] = 'main/index';

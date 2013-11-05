@@ -52,6 +52,12 @@ $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'root';
 $db['default']['password'] = 'admin';
 $db['default']['database'] = 'tr';
+
+$db['default']['hostname'] = 'localhost';
+$db['default']['username'] = 'u5149_test';
+$db['default']['password'] = 'xur83z4';
+$db['default']['database'] = 'u5149395_test';
+
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = FALSE;

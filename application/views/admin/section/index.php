@@ -1,6 +1,6 @@
 <section>
-    <h2>Цвета</h2>
-    <div><?php echo anchor('admin/section/edit', '<i class="icon-plus"></i> Добавить новый цвет'); ?></div>
+    <h2>Раделы</h2>
+    <div><?php echo anchor('admin/section/edit', '<i class="icon-plus"></i> Добавить новый раздел'); ?></div>
     <div><?php echo anchor('admin/section/order', '<i class="icon-move"></i> Сортировать список'); ?></div>
     <table class="table table-striped" id="dragndrop">
         <thead>

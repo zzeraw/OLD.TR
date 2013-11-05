@@ -31,6 +31,7 @@ class Color extends Admin_Controller
                 'title'
             ));
 
+
             if ($_FILES['filename']['size'] != 0) {
                 $fileinfo = $this->color_model->save_file($id);
                 if ($fileinfo['flag'] === 'success') {

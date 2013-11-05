@@ -27,6 +27,7 @@
 
 <div class="span6">
 
+    <?php if (isset($item->title)) : ?>
     <div class="item-info">
         <div class="item-more"><a href="<?=site_url($this->uri->segment(1))?>" class="pull-right">Вернуться к списку товаров</a></div>
         <dl class="dl-horizontal">
@@ -153,6 +154,7 @@
         </dl>
     </div>
 
+
     <div class="order-form">
 
         <?php echo form_open('', array('class' => 'form-horizontal')); ?>
@@ -221,6 +223,7 @@
 
         <?php echo form_close();?>
     </div>
+    <?php endif; ?>
 </div>
 
 </div>

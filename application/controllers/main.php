@@ -66,7 +66,7 @@ class Main extends Frontend_Controller {
             $item     = $this->main_model->getTitleBySlug($id);
 
             $this->data['breadcrumbs'][0] = array(site_url($slug), $category->title);
-            $this->data['breadcrumbs'][1] = array(site_url($slug . '/' . $id), $item->title);
+            $this->data['breadcrumbs'][1] = (isset($item->title)) ? array(site_url($slug . '/' . $id), $item->title) : array();
 
             $this->data['item']        = $this->item_model->get($id);
             $this->data['groups']      = $this->group_model->get_groups($id);
@@ -194,7 +194,7 @@ class Main extends Frontend_Controller {
         $email_config['smtp_port']    = '25';
         $email_config['smtp_timeout'] = '7';
         $email_config['smtp_user']    = 'orders@tatianarazumova.ru';
-        $email_config['smtp_pass']    = '___CHANGEME!!!';
+        $email_config['smtp_pass']    = 'x56t87z';
         $email_config['charset']      = 'utf-8';
         $email_config['newline']      = "\r\n";
         $email_config['mailtype']     = 'html';
@@ -222,6 +222,41 @@ class Main extends Frontend_Controller {
             return FALSE;
         }
     }
+
+    // private function send($message) {
+    //     $email_config['protocol']     = 'sendmail';
+    //     $email_config['smtp_host']    = 'smtp.tatianarazumova.ru';
+    //     $email_config['smtp_port']    = '25';
+    //     $email_config['smtp_timeout'] = '7';
+    //     $email_config['smtp_user']    = 'orders@tatianarazumova.ru';
+    //     $email_config['smtp_pass']    = 'x56t87z';
+    //     $email_config['charset']      = 'utf-8';
+    //     $email_config['newline']      = "\r\n";
+    //     $email_config['mailtype']     = 'html';
+    //     $email_config['validation']   = FALSE; // bool whether to validate email or not
+
+    //      //загружаем библиотеку email
+    //     $this->load->library('email');
+
+    //     $this->email->clear();
+    //      //выполняем инициализацию и заполняем все необходимые поля
+    //     $this->email->initialize($email_config);
+    //     $this->email->from('orders@tatianarazumova.ru', 'Ателье Татьяны Разумовой');
+    //     $this->email->to('tatiana_razumova@mail.ru');
+    //     $this->email->subject('Поступил новый заказ!');
+    //     $this->email->message($message);
+
+    //     $this->to      = 'tatiana_razumova@mail.ru';
+    //     $this->from    = 'orders@tatianarazumova.ru';
+    //     $this->subject = 'Поступил новый заказ!';
+    //     $this->body    = $message;
+
+    //     if ($this->email->send()) {
+    //         return TRUE;
+    //     } else {
+    //         return FALSE;
+    //     }
+    // }
 
     private function get_meta($page = FALSE) {
         $meta = $this->main_model->getMetaBySlug($page);

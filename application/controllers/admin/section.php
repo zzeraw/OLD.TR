@@ -25,9 +25,7 @@ class Section extends Admin_Controller
             $this->data['section'] = $this->section_model->get($id);
             count($this->data['section']) || $this->data['errors'][] = 'section could not be found';
         }
-        else {
-            redirect('admin/section');
-        }
+
 
         // Set up the form
         $rules = $this->section_model->rules;
@@ -37,7 +35,7 @@ class Section extends Admin_Controller
         if ($this->form_validation->run() == TRUE) {
             $data = $this->section_model->array_from_post(array(
                 'title',
-                // 'slug',
+                'slug',
                 'body',
                 'meta_title',
                 'meta_keywords',

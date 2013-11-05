@@ -10,11 +10,11 @@ class Section_Model extends MY_Model
             'label' => 'Название',
             'rules' => 'trim|required|max_length[64]|xss_clean'
         ),
-        // 'slug' => array(
-        //     'field' => 'slug',
-        //     'label' => 'Латинское название',
-        //     'rules' => 'trim|required|max_length[128]|url_title|xss_clean'
-        // ),
+        'slug' => array(
+            'field' => 'slug',
+            'label' => 'Латинское название',
+            'rules' => 'trim|required|max_length[128]|xss_clean'
+        ),
         'body' => array(
             'field' => 'body',
             'label' => 'Содержимое',

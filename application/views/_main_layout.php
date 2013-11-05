@@ -40,7 +40,7 @@
                         <?php endforeach; ?>
                             <li>
                                 <a href="http://vk.com/club49366024" title="Ателье Татьяны Разумовой во Вконтакте">
-                                    <img width="20" src="/assets/img/vk.png" alt="Группа во Вконтакте" />
+                                    <img width="95" style="border-radius: 5px;" src="/assets/img/vk.png" alt="Группа во Вконтакте" />
                                 </a>
                             </li>
                         </ul>

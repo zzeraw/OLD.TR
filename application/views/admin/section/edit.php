@@ -9,12 +9,12 @@
     </div>
 </div>
 
-<!--  <div class="control-group">
-    <label class="control-label" for="slug">Латинское название</label>
+ <div class="control-group">
+    <label class="control-label" for="slug">Латинское название страницы</label>
     <div class="controls">
         <?=form_input('slug', set_value('slug', $section->slug));?>
     </div>
-</div> -->
+</div>
 
 <div class="control-group">
     <label class="control-label" for="body">Содержимое</label>

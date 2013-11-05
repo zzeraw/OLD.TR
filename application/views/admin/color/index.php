@@ -1,5 +1,8 @@
 <section>
     <h2>Цвета</h2>
+    <?php if(isset($errors)) foreach ($errors as $error): ?>
+        <div><?=$error?></div>
+    <?php endforeach; ?>
     <div><?php echo anchor('admin/color/edit', '<i class="icon-plus"></i> Добавить новый цвет'); ?></div>
     <div><?php echo anchor('admin/color/order', '<i class="icon-move"></i> Сортировать список'); ?></div>
     <table class="table table-striped" id="dragndrop">
